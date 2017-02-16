@@ -4,6 +4,8 @@
  * with responsive back-in-place
  * @name jquery.hookto.js
  * @author Guillaume Bouillon (Agence'O)
+ * @usage (JS style) $('#element').hookTo('#hook-destination', {option_object, ...});
+ * @usage (DOM style) <element data-hook-to="#hook-destination" data-hook-to-return="pixel_value">...</element>
  */
 (function ($) {
 
@@ -71,8 +73,18 @@
   };
 
   $('[data-hook-to]').each(function () {
-    var hook = $(this).data('hook-to');
-    $(this).hookTo(hook);
+    var hook = $(this).data('hookTo');
+    var options = {};
+    if ($(this).data('hookTo-return')) {
+      $.extend(options, {'returnAt': $(this).data('hookTo-return')});
+    }
+    if ($(this).data('hookTo-position')) {
+      $.extend(options, {'position': $(this).data('hookTo-position')});
+    }
+    if ($(this).data('hookTo-hookOriginPrefix')) {
+      $.extend(options, {'hookOriginPrefix': $(this).data('hookTo-hookOriginPrefix')});
+    }
+    $(this).hookTo(hook, options);
   });
 
 })(jQuery);
