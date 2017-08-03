@@ -50,7 +50,7 @@
       _plugin.setPosition(settings.position);
 
       $(window).resize(function () {
-        if ($(window).width() <= settings.returnAt) {
+        if ($(window).outerWidth(true) <= settings.returnAt) {
           _plugin.retrievePosition($element);
         } else {
           _plugin.setPosition(settings.position);
@@ -85,7 +85,7 @@
     /**
      * The hooked element return to its previous position
      * @callback onUnhook
-     * @param {jQuery} el
+     * @param {Object} el
      */
     _plugin.retrievePosition = function (el) {
       var destination = $('#' + el.data('hookedTo'));
