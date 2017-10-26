@@ -55,9 +55,6 @@ var options = {
 ```
 
 ### All attributes
- data-hook-position="before" 
- * before
- * after
  
  Propriety | Type | Default | Description
  --------- | ---- | ------- | -----------  
