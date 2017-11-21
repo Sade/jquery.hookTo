@@ -29,6 +29,7 @@
       'hookOriginPrefix': 'hookto-orig',
       'position': 'after',
       'returnAt': '768',
+      'mobileFirst': true,
       'onInit': function () {},
       'onHook': function () {},
       'onUnhook': function () {}
@@ -50,11 +51,19 @@
       _plugin.setPosition(settings.position);
 
       $(window).resize(function () {
-        if ($(window).outerWidth(true) <= settings.returnAt) {
+        var condition = false;
+        if (settings.mobileFirst) {
+          condition = $(window).outerWidth(true) <= settings.returnAt;
+        } else {
+          condition = $(window).outerWidth(true) >= settings.returnAt;
+        }
+
+        if (condition) {
           _plugin.retrievePosition($element);
         } else {
           _plugin.setPosition(settings.position);
         }
+
       }).resize();
 
       settings.onInit.call($element);
@@ -127,6 +136,9 @@
     }
     if ($(this).data('hookTo-position')) {
       $.extend(options, {'position': $(this).data('hookTo-position')});
+    }
+    if ($(this).data('hookTo-mobileFirst')) {
+      $.extend(options, {'position': $(this).data('hookTo-mobileFirst')});
     }
     if ($(this).data('hookTo-hookOriginPrefix')) {
       $.extend(options, {'hookOriginPrefix': $(this).data('hookTo-hookOriginPrefix')});
