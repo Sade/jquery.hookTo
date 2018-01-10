@@ -137,8 +137,8 @@
     if ($(this).data('hookTo-position')) {
       $.extend(options, {'position': $(this).data('hookTo-position')});
     }
-    if ($(this).data('hookTo-mobileFirst')) {
-      $.extend(options, {'position': $(this).data('hookTo-mobileFirst')});
+    if ($(this).data('hookTo-mobileFirst') !== '') {
+      $.extend(options, {'mobileFirst': $(this).data('hookTo-mobileFirst')});
     }
     if ($(this).data('hookTo-hookOriginPrefix')) {
       $.extend(options, {'hookOriginPrefix': $(this).data('hookTo-hookOriginPrefix')});

@@ -43,11 +43,11 @@ My element had been moved ! It will return at his original place when the screen
 
 ```HTMl
 <div 
-  data-hook-mobile-first="true"
+  data-hook-to-mobile-first="true"
   data-hook-to="#hook-destination" 
-  data-hook-position="after" 
+  data-hook-to-position="after" 
   data-hook-to-return="768"
-  data-hook-to-OriginPrefix="hookto-orig"></div>
+  data-hook-to-origin-prefix="hookto-orig"></div>
 ```
 
 #### jQuery method
@@ -79,9 +79,9 @@ $('.my-element').hookTo(destinationHook, {
  
  Propriety | Type | Default | Description
  --------- | ---- | ------- | -----------  
- data-hook-mobile-first | Boolean | true | The element will be move if screen size is > of the breakpoint. ( false, < of the breakpoint )
+ data-hook-to-mobile-first | Boolean | true | The element will be move if screen size is > of the breakpoint. ( false, < of the breakpoint )
  data-hook-to | HTML element | - | An HTML element. Put ``#`` if is an ID, ``.`` if is a class.
- data-hook-position | String | after | Put the element just after. ( you can use "before", or "inside" instead)
+ data-hook-to-position | String | after | Put the element just after. ( you can use "before", or "inside" instead)
  data-hook-to-return | Number | 768 | Breakpoint. Move the element only after with window size
  data-hook-to-origin-prefix | String | hookto-orig | Breakpoint. Move the element only after with window size.
 
