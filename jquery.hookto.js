@@ -30,9 +30,12 @@
       'position': 'after',
       'returnAt': '768',
       'mobileFirst': true,
-      'onInit': function () {},
-      'onHook': function () {},
-      'onUnhook': function () {}
+      'onInit': function () {
+      },
+      'onHook': function () {
+      },
+      'onUnhook': function () {
+      }
     }, options);
 
     /**
@@ -98,7 +101,9 @@
      */
     _plugin.retrievePosition = function (el) {
       var destination = $('#' + el.data('hookedTo'));
-      destination.after(el);
+      if (destination[0] !== el.prev()[0]) {
+        destination.after(el);
+      }
 
       settings.onUnhook.call(el);
     };
