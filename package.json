@@ -1,0 +1,26 @@
+{
+  "name": "jquery.hookto",
+  "version": "1.0.0",
+  "description": "Move an HTML element on breakpoint screen size with dynamic back-in-place.",
+  "main": "jquery.hookto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sade/jquery.hookTo.git"
+  },
+  "keywords": [
+    "jQuery",
+    "hook",
+    "breakpoints",
+    "responsive",
+    "move"
+  ],
+  "author": "Sade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sade/jquery.hookTo/issues"
+  },
+  "homepage": "https://sade.github.io/jquery.hookTo/"
+}
