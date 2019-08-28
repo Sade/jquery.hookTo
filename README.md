@@ -5,12 +5,17 @@ Hook To - jQuery plugin
 Move an HTML element on breakpoint screen size with dynamic back-in-place.
 
 ## Install
-First, you have to add jquery before with plugin on your page.
-``<script src="jquery.min.js"></script>``
 
-After, you can call the plugin. Download this repository and call the js file.
-``<script src="jquery.hookto.js"></script>``
+### NPM
+Install jQuery first, then run :
+`npm install jquery.hookto`
 
+### Manualy 
+Install jQuery first, then jquery.hookto :
+```
+<script src="jquery.min.js"></script>
+<script src="jquery.hookto.js"></script>
+```
 
 ## How to
 To move and element on breakpoint screen size :
