@@ -2,7 +2,7 @@
 
 Hook To - jQuery plugin
 
-Move an HTML element on breakpoint screen size with dynamic back-in-place.
+Move an HTML element on specific screen size with dynamic back-in-place.
 ![hookto demo](hookto.gif)
 Example here : [hookto codepen](https://codepen.io/AxelBaron/pen/JjPJoPa)
 
@@ -20,28 +20,19 @@ Install jQuery first, then jquery.hookto :
 ```
 
 ## How to
-To move and element on breakpoint screen size :
 * Add ``data-hook-to=""`` attribute to your element.
-* Create HTML element called 'hook'. This hook is the destination element on breakpoint screen size.
+* Create HTML a traget.
 
 Example :
 ```HTMl
-<div class="my-element-to-move-on-breakpoint-screen-size" data-hook-to="#where-my-element-will-be-hooked"></div>
+<div class="my-element-to-move" 
+     data-hook-to="#link-to-target">
+</div>
 <div class="toto">
-    <meta id="where-my-element-will-be-hooked"/>
+    <meta id="target"/>
 </div>
 ```
-In this case, my HTML element ``class="my-element-to-move-on-breakpoint-screen-size"`` will be insert just after the HTML element ``<meta id="where-my-element-will-be-hooked">``.
-
-See result when screen size pass through the breakpoint.
-```HTMl
-<div class="toto">
-    <meta id="where-my-element-will-be-hooked"/>
-    <div class="my-element-to-move-on-breakpoint-screen-size" data-hook-to="#where-my-element-will-be-hooked"></div>
-</div>
-```
-My element had been moved ! It will return at his original place when the screen size pass through the breakpoint again.
-
+In this case, my HTML element ``class="my-element-to-move"`` will be insert just after the HTML element ``<meta id="target">``.
 
 
 ### Settings
