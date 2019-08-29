@@ -3,6 +3,8 @@
 Hook To - jQuery plugin
 
 Move an HTML element on breakpoint screen size with dynamic back-in-place.
+![hookto demo](hookto.gif)
+Example here : [hookto codepen](https://codepen.io/AxelBaron/pen/JjPJoPa)
 
 ## Install
 
